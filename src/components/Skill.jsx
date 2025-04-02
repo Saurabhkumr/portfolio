@@ -44,7 +44,7 @@ const Skill = () => {
   return (
     <>
       <div id="skills" className="scroll-mt-20">
-        <h2 className="flex justify-center mt-30 text-2xl text-orange-400">Expertise</h2>
+        <h2 className="flex justify-center mt-30 text-2xl text-orange-400">Technical Skills</h2>
 
         <div className="max-w-4xl mx-auto mt-6 mb-10 flex justify-center gap-4 flex-wrap">
           {skillData.map((i, index) => (
