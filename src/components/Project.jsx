@@ -42,7 +42,7 @@ const Project = () => {
       <h2 className="flex justify-center mb-10 text-2xl text-orange-400">
         Projects
       </h2>
-      <div className="max-w-11/12 mx-auto flex justify-center flex-wrap gap-4">
+      <div className="max-w-11/12 mx-auto flex justify-center flex-wrap gap-6">
         {project.map((i, index) => (
           <Card sx={{ maxWidth: 345, height: 450 }} key={index}>
             <CardMedia component="img" height="140" image={i?.img} alt="img" />
