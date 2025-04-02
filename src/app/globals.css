@@ -49,3 +49,16 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1062.66px;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw {
+  animation: draw 6s ease forwards;
+}

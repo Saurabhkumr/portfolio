@@ -5,9 +5,9 @@ import SendIcon from "@mui/icons-material/Send";
 const Contact = () => {
   return (
     <>
-      <div className=" mt-30 mb-20 w-11/12 max-w-[500px] mx-auto">
+      <div id="contact" className=" mt-30 mb-20 w-11/12 max-w-[500px] mx-auto scroll-mt-20">
         <div className="flex flex-col gap-5 w-full ">
-          <h1 className="text-center text-2xl">Contact Me</h1>
+          <h1 className="text-center text-2xl text-orange-400">Contact Me</h1>
           <input
             type="text"
             placeholder="Name"

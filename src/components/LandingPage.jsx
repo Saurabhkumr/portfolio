@@ -4,16 +4,27 @@ import Navbar from "./Navbar";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
+import DownloadIcon from "@mui/icons-material/Download";
 import { IconButton } from "@mui/material";
 
 const LandingPage = () => {
+  const handleDownload = () => {
+    const resumeURL = "/saurabh_resume.pdf";
+    const link = document.createElement("a");
+    link.href = resumeURL;
+    link.download = "Saurabh_Kumar_Resume.pdf";
+    link.click();
+  };
   return (
-    <div>
+    <div id="home">
       <Navbar />
-      <div className="w-11/12 max-w-3xl flex flex-col justify-center mx-auto text-center h-screen gap-4">
+      <div
+        className="w-11/12 max-w-3xl flex flex-col justify-center mx-auto text-center 
+       h-screen gap-4"
+      >
         <div className="flex justify-center">
           <img
-            src="/assets/me4.png"
+            src="/assets/me.png"
             alt=""
             className="rounded-full w-60 h-60 object-cover object-top"
           />
@@ -21,11 +32,21 @@ const LandingPage = () => {
         <h1>
           Hi, I am <span className="text-orange-400">Saurabh Kumar</span>
         </h1>
-        <p className="mt-2 max-w-2xl mx-auto">
-          I am a dedicated software developer with a passion for building robust
-          and scalable applications. With a strong foundation in full-stack
-          development, I thrive on transforming ideas into reality through clean
-          and efficient code.
+        <div className="flex justify-center md:hidden">
+          <div
+            className="mx-10 cursor-pointer hover:text-orange-400 border-2 px-4 py-1 rounded-2xl"
+            onClick={handleDownload}
+          >
+            Resume <DownloadIcon />
+          </div>
+        </div>
+        <p className="max-w-2xl mx-auto">
+          I'm a dedicated software developer with a passion for building
+          efficient and user-friendly applications. I love tackling complex
+          challenges and constantly exploring new ways to enhance my skills. I
+          believe in writing clean, maintainable code and enjoy working in
+          collaborative environments. My goal is to create impactful solutions
+          that make a difference.
         </p>
 
         {/* Social Media Icons */}
