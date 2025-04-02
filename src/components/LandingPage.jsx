@@ -6,8 +6,10 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import DownloadIcon from "@mui/icons-material/Download";
 import { IconButton } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 
 const LandingPage = () => {
+  const isPhone = useMediaQuery("(max-width:600px)");
   const handleDownload = () => {
     const resumeURL = "/saurabh_resume.pdf";
     const link = document.createElement("a");
@@ -57,7 +59,7 @@ const LandingPage = () => {
             target="_blank"
             rel="noopener noreferrer"
             sx={{
-              color: "inherit",
+              color: isPhone ? "#f97316" : "inherit",
               "&:hover": {
                 color: "#f97316",
               },
@@ -72,7 +74,7 @@ const LandingPage = () => {
             target="_blank"
             rel="noopener noreferrer"
             sx={{
-              color: "inherit",
+              color: isPhone ? "#f97316" : "inherit",
               "&:hover": {
                 color: "#f97316",
               },
@@ -87,7 +89,7 @@ const LandingPage = () => {
             target="_blank"
             rel="noopener noreferrer"
             sx={{
-              color: "inherit",
+              color: isPhone ? "#f97316" : "inherit",
               "&:hover": {
                 color: "#f97316",
               },
