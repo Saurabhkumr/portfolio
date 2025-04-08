@@ -16,7 +16,7 @@ const Animation = () => {
 
   return (
     <>
-      {isVisible ? (
+ 
         <div className="flex justify-center items-center min-h-screen bg-black">
           <svg
             width="220"
@@ -35,9 +35,7 @@ const Animation = () => {
             />
           </svg>
         </div>
-      ) : (
-        <LandingPage />
-      )}
+     
     </>
   );
 };
