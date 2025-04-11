@@ -34,7 +34,7 @@ const LandingPage = () => {
         <h1 className="text-2xl">
           Hi, I am <span className="text-orange-400 ">Saurabh Kumar</span>
         </h1>
-        <div className="flex justify-center md:hidden">
+        <div className="flex justify-center">
           <div
             className="mx-10 cursor-pointer hover:text-orange-400 border-2 px-4 py-1 rounded-2xl"
             onClick={handleDownload}
