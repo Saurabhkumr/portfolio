@@ -80,7 +80,7 @@ const Contact = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className={`h-10 flex justify-center items-center gap-2 bg-orange-400 py-2 rounded-md hover:bg-orange-500 cursor-pointer text-white font-medium ${
+          className={`h-10 flex justify-center items-center gap-2 bg-orange-400 py-2 rounded-md hover:bg-orange-500 cursor-pointer text-black font-medium ${
             isLoading ? "opacity-70 cursor-not-allowed" : ""
           }`}
         >
