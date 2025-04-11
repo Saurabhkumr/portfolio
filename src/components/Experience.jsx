@@ -26,7 +26,7 @@ const Experience = () => {
             <h3 className="vertical-timeline-element-title">
               Internship - Frontend Developer
             </h3>
-            <h3 className="vertical-timeline-element-subtitle">Metorkart</h3>
+            <h3 className="vertical-timeline-element-subtitle">Mentorkart</h3>
             <p>Feb, 2025 - April, 2025</p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
