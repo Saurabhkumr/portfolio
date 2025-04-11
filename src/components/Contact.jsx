@@ -45,10 +45,10 @@ const Contact = () => {
     <form
       onSubmit={handleSubmit}
       id="contact"
-      className="mt-30 mb-20 w-11/12 max-w-[500px] mx-auto scroll-mt-20"
+      className="mt-30 mb-20 w-11/12 max-w-[500px] mx-auto scroll-mt-25"
     >
       <div className="flex flex-col gap-5 w-full">
-        <h1 className="text-center text-2xl text-orange-400">Contact Me</h1>
+        <h1 className="text-center text-3xl mb-5 text-orange-400">Contact Me</h1>
 
         <input
           required

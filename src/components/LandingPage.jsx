@@ -21,7 +21,7 @@ const LandingPage = () => {
     <div id="home">
       <Navbar />
       <div
-        className="w-11/12 max-w-3xl flex flex-col justify-center mx-auto text-center 
+        className="w-11/12 max-w-3xl m-5 flex flex-col justify-center mx-auto text-center 
        h-screen gap-4"
       >
         <div className="flex justify-center">
@@ -31,8 +31,8 @@ const LandingPage = () => {
             className="rounded-full w-60 h-60 object-cover object-top"
           />
         </div>
-        <h1>
-          Hi, I am <span className="text-orange-400">Saurabh Kumar</span>
+        <h1 className="text-2xl">
+          Hi, I am <span className="text-orange-400 ">Saurabh Kumar</span>
         </h1>
         <div className="flex justify-center md:hidden">
           <div

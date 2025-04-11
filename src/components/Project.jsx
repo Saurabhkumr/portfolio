@@ -38,8 +38,8 @@ const Project = () => {
     window.open(link, "_blank");
   };
   return (
-    <div id="projects" className="scroll-mt-20">
-      <h2 className="flex justify-center mb-10 text-2xl text-orange-400">
+    <div id="projects" className="scroll-mt-25">
+      <h2 className="flex justify-center mb-10 mt-30 text-3xl text-orange-400">
         Projects
       </h2>
       <div className="max-w-11/12 mx-auto flex justify-center flex-wrap gap-6">
