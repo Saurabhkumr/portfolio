@@ -59,9 +59,9 @@ const LandingPage = () => {
             target="_blank"
             rel="noopener noreferrer"
             sx={{
-              color: isPhone ? "#f97316" : "inherit",
+              color: isPhone ? "#fb923c" : "inherit",
               "&:hover": {
-                color: "#f97316",
+                color: "#fb923c",
               },
             }}
           >
@@ -74,9 +74,9 @@ const LandingPage = () => {
             target="_blank"
             rel="noopener noreferrer"
             sx={{
-              color: isPhone ? "#f97316" : "inherit",
+              color: isPhone ? "#fb923c" : "inherit",
               "&:hover": {
-                color: "#f97316",
+                color: "#fb923c",
               },
             }}
           >
@@ -89,9 +89,9 @@ const LandingPage = () => {
             target="_blank"
             rel="noopener noreferrer"
             sx={{
-              color: isPhone ? "#f97316" : "inherit",
+              color: isPhone ? "#fb923c" : "inherit",
               "&:hover": {
-                color: "#f97316",
+                color: "#fb923c",
               },
             }}
           >
