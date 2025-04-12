@@ -12,7 +12,7 @@ const Skill = () => {
       logo: "assets/js.svg",
     },
     {
-      lang: "python",
+      lang: "Python",
       logo: "assets/python.svg",
     },
     {
