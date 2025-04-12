@@ -1,8 +1,10 @@
+"use client"
 import React, { useState } from "react";
 import SendIcon from "@mui/icons-material/Send";
 import { sendContactForm } from "@/lib/sendContactForm";
 import { toast } from "react-hot-toast";
 import { BeatLoader } from "react-spinners";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const initialValues = {
@@ -48,9 +50,17 @@ const Contact = () => {
       className="mt-30 mb-20 w-11/12 max-w-[500px] mx-auto scroll-mt-25"
     >
       <div className="flex flex-col gap-5 w-full">
-        <h1 className="text-center text-3xl mb-5 text-orange-400">Contact Me</h1>
+        <motion.h2
+          className="text-center text-3xl mb-5 text-orange-400"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Contact Me
+        </motion.h2>
 
-        <input
+        <motion.input
           required
           type="text"
           placeholder="Name"
@@ -58,8 +68,11 @@ const Contact = () => {
           name="name"
           value={values.name}
           onChange={handleChange}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         />
-        <input
+        <motion.input
           required
           type="email"
           placeholder="Email"
@@ -67,22 +80,32 @@ const Contact = () => {
           name="email"
           value={values.email}
           onChange={handleChange}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         />
-        <textarea
+
+        <motion.textarea
           required
           name="msg"
           placeholder="Message"
           className="border-2 border-gray-300 p-2 rounded-md h-50 focus:outline-none focus:border-orange-400"
           value={values.msg}
           onChange={handleChange}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
         />
 
-        <button
+        <motion.button
           type="submit"
           disabled={isLoading}
           className={`h-10 flex justify-center items-center gap-2 bg-orange-400 py-2 rounded-md hover:bg-orange-500 cursor-pointer text-black font-medium ${
             isLoading ? "opacity-70 cursor-not-allowed" : ""
           }`}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
         >
           {isLoading ? (
             <BeatLoader size={12} color="#fff" />
@@ -91,10 +114,9 @@ const Contact = () => {
               Send <SendIcon />
             </>
           )}
-        </button>
+        </motion.button>
       </div>
     </form>
   );
 };
-
 export default Contact;

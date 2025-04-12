@@ -1,16 +1,10 @@
 "use client";
+
 import React from "react";
-import DownloadIcon from "@mui/icons-material/Download";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Navbar = () => {
-  const handleDownload = () => {
-    const resumeURL = "/saurabh_resume.pdf";
-    const link = document.createElement("a");
-    link.href = resumeURL;
-    link.download = "Saurabh_Kumar_Resume.pdf";
-    link.click();
-  };
 
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -19,50 +13,39 @@ const Navbar = () => {
     }
   };
 
+  const navItems = [
+    { label: "Experience", id: "experience" },
+    { label: "Projects", id: "projects" },
+    { label: "Skills", id: "skills" },
+    { label: "Contact", id: "contact" },
+  ];
+
   return (
-    <div className="fixed top-0 left-0 right-0 bg-[#0a0a0a] z-1">
+    <motion.div
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="fixed top-0 left-0 right-0 bg-[#0a0a0a] z-50"
+    >
       <div className="max-w mt-2 flex items-center justify-around mx-auto p-4 h-15">
-        <Image src="/assets/logo.svg" width={120} height={80} alt="logo" />
+        <Image src="/assets/logo.svg" width={120} height={80} alt="logo" className="cursor-pointer" onClick={()=>handleScroll("home")}/>
+
         <ul className="md:flex hidden items-center">
-          <li
-            className="mx-10 cursor-pointer hover:text-orange-400"
-            onClick={() => handleScroll("home")}
-          >
-            Home
-          </li>
-          <li
-            className="mx-10 cursor-pointer hover:text-orange-400"
-            onClick={() => handleScroll("experience")}
-          >
-            Experience
-          </li>
-          <li
-            className="mx-10 cursor-pointer hover:text-orange-400"
-            onClick={() => handleScroll("projects")}
-          >
-            Projects
-          </li>
-          <li
-            className="mx-10 cursor-pointer hover:text-orange-400"
-            onClick={() => handleScroll("skills")}
-          >
-            Skills
-          </li>
-          <li
-            className="mx-10 cursor-pointer hover:text-orange-400"
-            onClick={() => handleScroll("contact")}
-          >
-            Contact
-          </li>
-          {/* <li
-            className="mx-10 cursor-pointer hover:text-orange-400 border-2 px-4 py-1 rounded-2xl"
-            onClick={handleDownload}
-          >
-            Resume <DownloadIcon />
-          </li> */}
+          {navItems.map((item, index) => (
+            <motion.li
+              key={item.id}
+              className="mx-10 cursor-pointer hover:text-orange-400"
+              onClick={() => handleScroll(item.id)}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              {item.label}
+            </motion.li>
+          ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

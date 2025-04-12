@@ -1,16 +1,12 @@
-"use client"
+"use client";
 
 import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import CardActionArea from "@mui/material/CardActionArea";
-import CardActions from "@mui/material/CardActions";
-import Button from "@mui/material/Button";
-import { GitHub, TitleTwoTone } from "@mui/icons-material";
-import { grey } from "@mui/material/colors";
-import LinkIcon from "@mui/icons-material/Link";
+import { GitHub } from "@mui/icons-material";
+import { motion } from "framer-motion";
 
 const Project = () => {
   const project = [
@@ -37,24 +33,42 @@ const Project = () => {
   const handleClick = (link) => {
     window.open(link, "_blank");
   };
+
   return (
     <div id="projects" className="scroll-mt-25">
-      <h2 className="flex justify-center mb-10 mt-30 text-3xl text-orange-400">
+      <motion.h2
+        className="flex justify-center mt-30 mb-10 text-3xl text-orange-400"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         Projects
-      </h2>
+      </motion.h2>
       <div className="max-w-11/12 mx-auto flex justify-center flex-wrap gap-6">
         {project.map((i, index) => (
-          <Card sx={{ maxWidth: 345, height: 450 }} key={index}>
-            <CardMedia component="img" height="140" image={i?.img} alt="img" />
-            <CardContent>
-              <div className="text-2xl mb-2 hover:text-orange-400 cursor-pointer" onClick={() => handleClick(i?.url)}>
-                {i?.title} <GitHub  />
-              </div>
-              <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                {i?.desc}
-              </Typography>
-            </CardContent>
-          </Card>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
+          >
+            <Card sx={{ maxWidth: 345, height: 450 }}>
+              <CardMedia component="img" height="140" image={i.img} alt="img" />
+              <CardContent>
+                <div
+                  className="text-2xl mb-2 hover:text-orange-400 cursor-pointer"
+                  onClick={() => handleClick(i.url)}
+                >
+                  {i.title} <GitHub />
+                </div>
+                <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                  {i.desc}
+                </Typography>
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
       </div>
     </div>

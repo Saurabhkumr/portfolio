@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import {
   VerticalTimeline,
@@ -5,13 +6,20 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import WorkIcon from "@mui/icons-material/Work";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
     <div id="experience" className="scroll-mt-25 z-0">
-      <h2 className="flex justify-center mb-10 mt-20 text-3xl text-orange-400">
+      <motion.h2
+        className="flex justify-center mt-20 mb-10 text-3xl text-orange-400"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         Experience
-      </h2>
+      </motion.h2>
       <div className="mt-10">
         <VerticalTimeline className="relative z-0">
           <VerticalTimelineElement
