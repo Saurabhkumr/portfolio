@@ -1,21 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --scrollbar-thumb: #fb923c; 
-  --scrollbar-thumb-hover: #f97316; 
-  --scrollbar-track: #e5e7eb;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --scrollbar-thumb: #fb923c; 
-    --scrollbar-thumb-hover: #f97316; 
-    --scrollbar-track: #333333;
-  }
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --scrollbar-thumb: #fb923c;
+  --scrollbar-thumb-hover: #f97316;
+  --scrollbar-track: #333333;
 }
 
 body {
