@@ -27,7 +27,7 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 bg-[#0a0a0a] z-50"
     >
-      <div className="max-w mt-2 flex items-center justify-around mx-auto p-4 h-15">
+      <div className="max-w mt-2 flex items-center justify-around mx-auto p-4 h-15 italic">
         <Image src="/assets/logo.svg" width={120} height={80} alt="logo" className="cursor-pointer" onClick={()=>handleScroll("home")}/>
 
         <ul className="md:flex hidden items-center">

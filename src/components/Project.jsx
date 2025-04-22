@@ -43,7 +43,7 @@ const Project = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Projects
+        Featured Projects
       </motion.h2>
       <div className="max-w-11/12 mx-auto flex justify-center flex-wrap gap-6">
         {project.map((i, index) => (
