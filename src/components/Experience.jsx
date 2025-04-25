@@ -12,7 +12,7 @@ const Experience = () => {
   return (
     <div id="experience" className="scroll-mt-25 z-0">
       <motion.h2
-        className="flex justify-center mt-20 mb-10 text-3xl text-orange-400"
+        className="flex justify-center mb-10 text-3xl text-orange-400"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
