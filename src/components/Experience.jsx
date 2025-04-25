@@ -35,7 +35,7 @@ const Experience = () => {
             <h3 className="vertical-timeline-element-subtitle">Mentorkart</h3>
             <p>February, 2025 - April, 2025</p>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
+          {/* <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "#fb923c", color: "black" }}
             contentArrowStyle={{ borderRight: "7px solid #fb923c" }}
@@ -47,7 +47,7 @@ const Experience = () => {
             </h3>
             <h3 className="vertical-timeline-element-subtitle">BitQit</h3>
             <p>April, 2025 - Present</p>
-          </VerticalTimelineElement>
+          </VerticalTimelineElement> */}
         </VerticalTimeline>
       </div>
     </div>
