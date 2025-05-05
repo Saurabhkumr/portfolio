@@ -9,7 +9,7 @@ import XIcon from "@mui/icons-material/X";
 import { IconButton } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
-import ParticleComponent from "./ParticleComponent";
+// import ParticleComponent from "./ParticleComponent";
 
 const floatingAnimation = {
   "@keyframes float": {
@@ -45,7 +45,7 @@ const LandingPage = () => {
   return (
     <div id="home" className="relative overflow-hidden">
       {/* Only render ParticleComponent for LandingPage */}
-      <ParticleComponent />
+      {/* <ParticleComponent /> */}
 
       {/* Main Content */}
       <Navbar />
