@@ -9,28 +9,11 @@ import XIcon from "@mui/icons-material/X";
 import { IconButton } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
-// import ParticleComponent from "./ParticleComponent";
-
-const floatingAnimation = {
-  "@keyframes float": {
-    "0%": { transform: "translateY(0)" },
-    "50%": { transform: "translateY(-10px)" },
-    "100%": { transform: "translateY(0)" },
-  },
-  animation: "float 3s ease-in-out infinite",
-};
+import ParticleComponent from "./ParticleComponent";
 
 const LandingPage = () => {
   const isPhone = useMediaQuery("(max-width:600px)");
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleDownload = () => {
-    const resumeURL = "/saurabh_resume.pdf";
-    const link = document.createElement("a");
-    link.href = resumeURL;
-    link.download = "Saurabh_Kumar_Resume.pdf";
-    link.click();
-  };
 
   const modalVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -44,10 +27,9 @@ const LandingPage = () => {
 
   return (
     <div id="home" className="relative overflow-hidden">
-      {/* Only render ParticleComponent for LandingPage */}
-      {/* <ParticleComponent /> */}
-
-      {/* Main Content */}
+      // Only render ParticleComponent for LandingPage
+      <ParticleComponent />
+      //Main Content
       <Navbar />
       <div className="w-11/12 max-w-3xl m-5 flex flex-col justify-center mx-auto text-center h-screen gap-4 italic z-10 relative">
         <motion.div
@@ -165,7 +147,6 @@ const LandingPage = () => {
           </IconButton>
         </motion.div>
       </div>
-
       <AnimatePresence>
         {isModalOpen && (
           <motion.div

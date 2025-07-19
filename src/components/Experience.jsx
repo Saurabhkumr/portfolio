@@ -30,6 +30,19 @@ const Experience = () => {
             icon={<WorkIcon />}
           >
             <h3 className="vertical-timeline-element-title">
+              SDE
+            </h3>
+            <h3 className="vertical-timeline-element-subtitle">Remotestate</h3>
+            <p>June, 2025 - July, 2025</p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: "#fb923c", color: "black" }}
+            contentArrowStyle={{ borderRight: "7px solid #fb923c" }}
+            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            icon={<WorkIcon />}
+          >
+            <h3 className="vertical-timeline-element-title">
               Internship - Frontend Developer
             </h3>
             <h3 className="vertical-timeline-element-subtitle">Mentorkart</h3>

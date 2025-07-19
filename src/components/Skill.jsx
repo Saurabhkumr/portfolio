@@ -8,6 +8,7 @@ const Skill = () => {
   const skillData = [
     { lang: "Java", logo: "assets/java.svg" },
     { lang: "Javascript", logo: "assets/js.svg" },
+    { lang: "Golang", logo: "assets/golang.svg" },
     { lang: "Python", logo: "assets/python.svg" },
     { lang: "React", logo: "assets/react.svg" },
     { lang: "Next.js", logo: "assets/nextjs.svg" },
