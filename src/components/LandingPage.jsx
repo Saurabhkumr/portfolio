@@ -27,7 +27,6 @@ const LandingPage = () => {
 
   return (
     <div id="home" className="relative overflow-hidden">
-      // Only render ParticleComponent for LandingPage
       <ParticleComponent />
       //Main Content
       <Navbar />
