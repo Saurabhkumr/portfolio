@@ -28,7 +28,6 @@ const LandingPage = () => {
   return (
     <div id="home" className="relative overflow-hidden">
       <ParticleComponent />
-      //Main Content
       <Navbar />
       <div className="w-11/12 max-w-3xl m-5 flex flex-col justify-center mx-auto text-center h-screen gap-4 italic z-10 relative">
         <motion.div
